@@ -2,7 +2,6 @@ package d_13_05_2022;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Zadatak1 {
@@ -58,7 +57,32 @@ public class Zadatak1 {
         System.out.println("Unesite poziciju: ");
         int suma = 0;
         int i = s.nextInt();
-        suma = brojevi.get(i) + brojevi.get(i - 1) + brojevi.get(i + 1) + brojevi.get(i - 5) + brojevi.get(i + 5);
+        int pozicija = 0;
+        int levo = 0;
+        int desno = 0;
+        int gore = 0;
+        int dole = 0;
+        if (i > 4 && i < 20) {
+            pozicija = brojevi.get(i);
+            levo = brojevi.get(i - 1);
+            desno = brojevi.get(i + 1);
+            gore = brojevi.get(i - 5);
+            dole = brojevi.get(i + 5);
+        } else if (i <= 4) {
+            pozicija = brojevi.get(i);
+            levo = brojevi.get(i - 1);
+            desno = brojevi.get(i + 1);
+            gore = 0;
+            dole = brojevi.get(i + 5);
+        } else if (i >= 20) {
+            pozicija = brojevi.get(i);
+            levo = brojevi.get(i - 1);
+            desno = brojevi.get(i + 1);
+            gore = brojevi.get(i - 5);
+            dole = 0;
+        }
+
+        suma = suma + pozicija + levo + desno + gore + dole;
         System.out.println("Suma je " + suma);
     }
 }
