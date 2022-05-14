@@ -18,3 +18,4 @@ Push-ujte na github
   Proverite da li git status ne evidentira taj fajl
   Commit-ujte promenu kao “Update gitignore file”
   Push-ujte na github
+
