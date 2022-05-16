@@ -33,11 +33,13 @@ public class Zadatak1 {
         brojevi.add(6);
         brojevi.add(7);
         brojevi.add(4);
+
         brojevi.add(4);
         brojevi.add(2);
         brojevi.add(5);
         brojevi.add(1);
         brojevi.add(4);
+
         brojevi.add(1);
         brojevi.add(4);
         brojevi.add(9);
@@ -54,17 +56,25 @@ public class Zadatak1 {
         brojevi.add(4);
         brojevi.add(1);
 
+
         System.out.println("Unesite poziciju: ");
         int suma = 0;
         int i = s.nextInt();
         int pozicija = brojevi.get(i);
-        int levo = brojevi.get(i-1);
-        int desno = brojevi.get(i+1);
-        int gore = brojevi.get(i-5);
-        int dole = brojevi.get(i+5);
-        if (i % 5 != 0 && i > 4 && i % 5 != 4 && i < 20) {
-            suma = suma + pozicija + levo + desno + gore + dole;
+        int levo = brojevi.get(i - 1);
+        int desno = brojevi.get(i + 1);
+        int gore = brojevi.get(i - 5);
+        int dole = brojevi.get(i + 5);
+        if (i < 5) {
+            gore = 0;
+        } else if (i % 5 == 0) {
+            levo = 0;
+        } else if (i % 5 == 4) {
+            desno = 0;
+        } else if (i > 19) {
+            dole = 0;
         }
+        suma = pozicija + levo + desno + gore + dole;
 
         System.out.println("Suma je " + suma);
     }
