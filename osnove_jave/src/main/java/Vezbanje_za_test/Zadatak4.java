@@ -57,6 +57,5 @@ public class Zadatak4 {
             System.out.println(pretraga.get(brojRezultata * (strana - 1) + i));
         }
 
-
     }
 }
