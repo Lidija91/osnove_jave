@@ -1,4 +1,4 @@
-package p_24_05_2022;
+package p_24_05_2022.p_24_05_2022;
 
 public class Ugovor {
 

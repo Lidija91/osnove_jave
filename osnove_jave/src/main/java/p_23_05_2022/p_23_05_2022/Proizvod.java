@@ -1,4 +1,4 @@
-package p_23_05_2022;
+package p_23_05_2022.p_23_05_2022;
 
 public class Proizvod {
     private String naziv;
